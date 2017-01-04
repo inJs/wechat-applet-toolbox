@@ -14,7 +14,7 @@ var getStorageWrapper = function(data, ttl) {
 		storeTime: Date.now(), // 存储时间
 		data: data // 存储目标
 	}
-}
+};
 
 var filter = function(obj, key, mode) {
 	if(!obj) {
@@ -45,7 +45,7 @@ var filter = function(obj, key, mode) {
 	var result = mode === 'sync' ? data.data : {data: data.data, errMsg: errMsg};
 
 	return result;
-}
+};
 
 module.exports = {
 	setStorage: function(opts) {
@@ -110,4 +110,4 @@ module.exports = {
 	removeStorageSync: wx.removeStorageSync,
 	clearStorage: wx.clearStorage,
 	clearStorageSync: wx.clearStorageSync
-}
+};
